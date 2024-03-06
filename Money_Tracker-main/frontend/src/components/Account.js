@@ -12,7 +12,9 @@ const Account = () => {
     const [user, setUser] = useState({
         username: '',
         email: '',
-        password: ''
+        password: '',
+        cpassword: '', // Add confirmation password
+
     });
 
     const handleChange = (e) => {
@@ -24,6 +26,18 @@ const Account = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (user.password !== user.cpassword) {
+            alert("Passwords do not match!");
+            setUser({
+                username: '',
+                email: '',
+                password: '',
+                cpassword: '',
+            });
+            return;
+        }
+
         try {
             // Make a POST request to the signup endpoint
             const response = await fetch('http://localhost:8080/api/users/signup', {
@@ -39,10 +53,26 @@ const Account = () => {
 
                 const responseData = await response.json();
                 console.log(responseData.message);
+                alert("Registration Successful!")
+
+                setUser({
+                    username: '',
+                    email: '',
+                    password: '',
+                    cpassword: '',
+                });
             } else {
                 // If the response status is not OK, handle the error case
                 const errorData = await response.json();
                 console.error('Error during signup:', errorData.error);
+                alert("Registration Unsuccessful!")
+
+                setUser({
+                    username: '',
+                    email: '',
+                    password: '',
+                    cpassword: '',
+                });
             }
         } catch (error) {
             // Handle network errors or other exceptions
@@ -69,13 +99,13 @@ const Account = () => {
                         <label>Password</label>
                     </div>
                     <div className='txt_field'>
-                        <input type="password" name="cpassword" required/>
+                        <input type="password" name="cpassword" required value={user.cpassword} onChange={handleChange}/>
                         <span></span>
                         <label>Confirm Password</label>
                     </div>
                     <input name="submit" type="Submit" value="Sign Up"/>
                     <Link to = "/" style={linkStyle}>
-                    <div class="signup_link">
+                    <div className="signup_link">
                         Have an Account ? Login
                     </div>
                     </Link>
