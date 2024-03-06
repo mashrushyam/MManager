@@ -43,7 +43,7 @@ const Dashboard = ({ moneymanager }) => {
         <div className='dashboard-container'>
             <div className='rounded-blocks'>
                 <div className='left-section'>
-                    <Nav />
+                    <Nav/>
                 </div>
 
                 <div className='center-section'>
@@ -56,24 +56,20 @@ const Dashboard = ({ moneymanager }) => {
                     </div>
                     <div className='info-boxes'>
                         <div className='info-box total-expense'>
-                            <p className='infotext'>Total Expense</p>
-                            <p className='infotext'>{totalData}</p>
+                            <p className='infotext'>Total Spent</p><br/>
+                            <strong><p className='infotext'>{totalData}</p></strong>
                         </div>
                         <div className='info-box total-owe'>
-                            <p className='infotext'>Total Owe</p>
-                            <p className='infotext' style={{ color: "red" }}>{oweData}</p>
+                            <p className='infotext'>Total Giving</p><br/>
+                            <strong><p className='infotext' style={{ color: "red" }}>{oweData}</p></strong>
                         </div>
                         <div className='info-box your-own'>
-                            <p className='infotext'>Your Own</p>
+                            <p className='infotext'>Total Taking</p><br/>
                             <strong><p className='infotext' style={{ color: "green" }}>{ownData}</p></strong>
                         </div>
                     </div>
                 </div>
-
                 <div className='right-section'>
-                    <div className='activities'>
-                        <h2 className='h2'></h2>
-                    </div>
                 </div>
             </div>
         </div>

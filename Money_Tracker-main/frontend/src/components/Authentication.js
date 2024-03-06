@@ -34,7 +34,7 @@ const Authentication = () => {
                 sessionStorage.setItem('token', token);
                 localStorage.setItem('uname',credentials.username);
                 console.log('Login successful!');
-                alert("Login Successful!")
+                alert("Login Successful!!")
                 navigate('/dashboard');
             } else {
                 console.error('Login failed:', response.data.error);

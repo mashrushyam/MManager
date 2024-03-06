@@ -12,11 +12,11 @@ const Nav = () => {
     return (
         <div className='nav-bar'>
             <div className='logo'>
-                <a href='#'>Money<br/> Manager</a>
+                Money<br/><span>Manager</span>
             </div>
             <ul>
                 <li><a onClick={() => handleNavigation('/dashboard')}>Home</a></li>
-                <li><a onClick={() => handleNavigation('/groups')}>Expenses</a></li>
+                <li><a onClick={() => handleNavigation('/groups')}>Groups</a></li>
                 <li><a onClick={() => handleNavigation('/')}>Logout</a></li>
             </ul>
         </div>

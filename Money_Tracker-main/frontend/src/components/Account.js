@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 const Account = () => {
 
@@ -53,7 +53,7 @@ const Account = () => {
 
                 const responseData = await response.json();
                 console.log(responseData.message);
-                alert("Registration Successful!")
+                alert("Registration Successful!!")
 
                 setUser({
                     username: '',
