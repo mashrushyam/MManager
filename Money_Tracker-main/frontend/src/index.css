@@ -718,3 +718,52 @@ h2 {
 .submitButton:hover {
   background-color: #3fccaa;
 }
+
+/* Add this to your existing CSS file or create a new one */
+
+.group-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
+  align-items: center;
+  color: white;
+}
+
+.group-list li {
+  display: flex;
+  width: 120px;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #008000;
+  padding: 30px;
+  border-radius: 25px;
+  letter-spacing: 2px;
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+
+.group-list li:last-child {
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 80px;
+  margin-right: 15px;
+}
+
+.group-list .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  color: #008000;
+  text-decoration: none;
+}
+
+.group-list .logo span {
+  color: #5bd485;
+}
+
+.group-list li a:hover,
+.group-list li a:active {
+  background: #c0f9b8;
+}

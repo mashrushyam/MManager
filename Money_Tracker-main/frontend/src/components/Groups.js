@@ -110,7 +110,7 @@ const Dashboard = ({ moneymanager }) => {
                                         transition: 'background 0.3s ease',
                                     }}
                                     onMouseEnter={(e) => {
-                                        e.target.style.background = 'blue'; }}
+                                        e.target.style.background = '#b8f9e2'; }}
                                     onMouseLeave={(e) => { e.target.style.background = 'transparent'; }}
                                 >
                                     {group.groupName}
