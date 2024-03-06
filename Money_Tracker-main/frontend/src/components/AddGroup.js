@@ -96,24 +96,20 @@ const AddGroup = () => {
                         <button type="button" onClick={handleAddMember} className="addMemberButton">Add Member</button>
                         <br/>
                         {errorMessage && <p className="errorMessage">{errorMessage}</p>}
-                        {members.map((member, index) => (
-                            <div key={index} className="memberItem">
-                                <span>{member}</span>
-                                <button type="button" onClick={() => handleRemoveMember(index)}
-                                        className="removeMemberButton">Remove
-                                </button>
-                            </div>
-                        ))}
                         <br/>
                         <button type="submit" className="submitButton">Add Group</button>
 
                     </form>
                 </div>
                 <div className='right-section'>
-                    <div className='activities'>
-                        <h2 className='h2'></h2>
-
-                    </div>
+                    {members.map((member, index) => (
+                        <div key={index} className="memberItem">
+                            <span>{member}</span>
+                            <button type="button" onClick={() => handleRemoveMember(index)}
+                                    className="removeMemberButton">Remove
+                            </button>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -42,7 +42,7 @@ const Dashboard = ({ moneymanager }) => {
                     <Nav />
                 </div>
                 <div className='center-section'>
-                    <div className='activities' style={{overflowY: 'auto', maxHeight: '400px'}}>
+                    <div style={{overflowY: 'auto', maxHeight: '400px'}}>
                         <h2 className='h2'>Expenses for Group {selectedGroupName}</h2>
                         <ul>
                             {expenses.map(expense => (

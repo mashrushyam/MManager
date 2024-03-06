@@ -220,12 +220,23 @@ const AddExpense = () => {
 
     const amountForMember = (member) => amounts[member] || '';
 
+    const [splitOption, setSplitOption] = useState('equally');
+
+    // ... (other functions)
+
+    const handleSplitOptionChange = (e) => {
+        setSplitOption(e.target.value);
+        if (e.target.value === 'equally') {
+            handleEquallySplitChange();
+        }
+    };
+
 
     return (
         <div className='dashboard-container'>
             <div className='rounded-blocks'>
                 <div className='left-section'>
-                    <Nav />
+                    <Nav/>
                 </div>
                 <div className='center-section'>
                     <h2 className='h2'>Add Expense</h2>
@@ -250,62 +261,40 @@ const AddExpense = () => {
                                    onChange={(e) => setAmount(e.target.value)}/>
                         </div>
                         <div className="form-element">
-                            <label className="label h2">Paid By</label>
-                            {equallySplit ? (
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        id="equallySplitCheckbox"
-                                        checked={equallySplit}
-                                        onChange={handleEquallySplitChange}
-                                    />
-                                    <label htmlFor="equallySplitCheckbox" className='h2'>Equally Split</label>
-                                </div>
-                            ) : (
-
-                                <>
-                                    <div>
-                                        <input
-                                            type="checkbox"
-                                            id="equallySplitCheckbox"
-                                            checked={equallySplit}
-                                            onChange={handleEquallySplitChange}
-                                        />
-                                        <label htmlFor="equallySplitCheckbox" className='h2'>Equally Split</label>
-                                    </div>
-                                    {groupMembers.map(member => (
-                                        <div key={member} className="checkbox h2">
-                                            <input
-                                                type="checkbox"
-                                                id={member}
-                                                value={member}
-                                                checked={selectedMembers.includes(member)}
-                                                onChange={() => handleCheckboxChange(member)}
-                                            />
-                                            <label htmlFor={member}>{member}</label>
-                                            <input
-                                                type="number"
-                                                placeholder="Amount"
-                                                value={amountForMember(member)}
-                                                onChange={(e) => handleAmountChange(member, e.target.value)}
-                                            />
-                                        </div>
-                                    ))}
-                                </>
-                            )}
+                            <label className="label h2">Split as</label>
+                            <select className="select" value={splitOption} onChange={handleSplitOptionChange}>
+                                <option value="equally">Equally</option>
+                                <option value="unequally">Unequally</option>
+                            </select>
                         </div>
+                        {splitOption === 'equally' ? (
+                            // Render equally split section (similar to your existing code)
+                            // ...
+                        ) => {
+                        } : null}
                         {error && <p className="error">{error}</p>}
-                        <button className="button" type="submit">Add Expense</button>
-                    </form>
+                        <button className="button" type="submit">Add Expense</button></form>
                 </div>
                 <div className='right-section'>
-                    <div className='activities'>
-                        <h2 className='h2'></h2>
-                    </div>
+                    {splitOption === 'unequally' && (
+                        <>
+                            {groupMembers.map(member => (
+                                <div key={member} className="unequally-split-section">
+                                    <label className="label h2">{member}</label>
+                                    <input
+                                        type="number"
+                                        placeholder="Amount"
+                                        value={amountForMember(member)}
+                                        onChange={(e) => handleAmountChange(member, e.target.value)}
+                                    />
+                                </div>
+                            ))}
+                        </>
+                    )}
                 </div>
             </div>
         </div>
-    );
+);
 };
 
 export default AddExpense;

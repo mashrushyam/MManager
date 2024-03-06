@@ -183,22 +183,23 @@ input[type="Submit"]:hover{
 /*  background-color: #eee;*/
 /*}*/
 
-/*table {*/
-/*  border-collapse: collapse;*/
-/*  width: 100%;*/
-/*}*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-right: 20px;
+}
 
-/*th, td {*/
-/*  border: 1px solid white;*/
-/*  padding: 8px;*/
-/*  text-align: left;*/
-/*}*/
+th, td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: left;
+}
 
-/*th {*/
-/*  color: black;*/
-/*  font-weight: bolder;*/
-/*  background-color: #5bd485;*/
-/*}*/
+th {
+  color: black;
+  font-weight: bolder;
+  background-color: #5bd485;
+}
 
 /*.action-button2 {*/
 /*  padding: 20px 30px; !* Increase padding for a larger button *!*/
@@ -211,19 +212,19 @@ input[type="Submit"]:hover{
 /*  transition: background-color 0.3s ease;*/
 /*}*/
 
-/*.action-button3 {*/
-/*  padding: 20px 30px; !* Increase padding for a larger button *!*/
-/*  font-size: 16px; !* Increase font size for larger text *!*/
-/*  background-color: blue;*/
-/*  color: #fff;*/
-/*  border: none;*/
-/*  border-radius: 12px; !* Increase border-radius for rounded corners *!*/
-/*  cursor: pointer;*/
-/*  transition: background-color 0.3s ease;*/
-/*  position: fixed;*/
-/*  right: 260px;*/
-/*  bottom: 170px;*/
-/*}*/
+.action-button3 {
+  padding: 20px 30px; /* Increase padding for a larger button */
+  font-size: 16px; /* Increase font size for larger text */
+  background-color: #45ffbc;
+  color: black;
+  border: none;
+  border-radius: 12px; /* Increase border-radius for rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  right: 320px;
+  bottom: 170px;
+}
 
 /*.owe-list {*/
 /*  margin-top: 20px;*/
@@ -349,60 +350,6 @@ input[type="Submit"]:hover{
 /*  margin: 4px 0;*/
 /*  border-radius: 4px;*/
 /*  color: white;*/
-/*}*/
-
-/*!* AddExpenseForm.css (or your preferred CSS file) *!*/
-
-/*.form-element {*/
-/*  margin-bottom: 20px;*/
-/*}*/
-
-/*.label {*/
-/*  display: block;*/
-/*  margin-bottom: 8px;*/
-/*  font-weight: bold;*/
-/*}*/
-
-/*.select,*/
-/*.input {*/
-/*  width: 100%;*/
-/*  padding: 10px;*/
-/*  box-sizing: border-box;*/
-/*  border: 1px solid #ccc;*/
-/*  border-radius: 4px;*/
-/*  font-size: 16px;*/
-/*}*/
-
-/*.input[type="number"] {*/
-/*  !* Add specific styles for number input if needed *!*/
-/*}*/
-
-/*.error {*/
-/*  color: #ff0000;*/
-/*  margin-top: 5px;*/
-/*}*/
-
-/*.button {*/
-/*  background-color: #4caf50;*/
-/*  color: white;*/
-/*  border: none;*/
-/*  padding: 10px 15px;*/
-/*  text-align: center;*/
-/*  text-decoration: none;*/
-/*  display: inline-block;*/
-/*  font-size: 16px;*/
-/*  cursor: pointer;*/
-/*  border-radius: 4px;*/
-/*  margin-top: 20px;*/
-/*}*/
-
-/*.button:hover {*/
-/*  background-color: #45a049;*/
-/*}*/
-
-/*.username {*/
-/*  font-family: 'Lobster', cursive;*/
-/*  font-size: 2.5rem;*/
 /*}*/
 
 .dashboard-container {
@@ -540,6 +487,8 @@ input[type="Submit"]:hover{
   flex: 1;
   padding: 20px;
   background: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 .activities {
@@ -603,3 +552,169 @@ input[type="Submit"]:hover{
   background: #b8f9e2;
 }
 
+h2 {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  font-weight: bolder;
+  color: #008000;
+  font-size: 30px;
+}
+
+.form-element {
+  margin-bottom: 10px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.checkbox input {
+  margin-right: 10px;
+}
+
+.button {
+  background-color: #45ffbc;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #3fccaa;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.select{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+/* Additional styles for select when it's focused or hovered */
+.select:hover,
+.select:focus,
+.input:hover,
+.input:focus {
+  border-color: #45ffbc;
+  outline: none;
+}
+
+
+.unequally-split-section {
+  display: flex;
+  justify-content: space-between; /* Space between name and amount input */
+  align-items: center; /* Align items vertically centered */
+  margin-bottom: 30px; /* Add some bottom margin for spacing */
+
+}
+
+/*.h2 {*/
+/*  margin-top: 10px;*/
+/*  margin-bottom: 35px;*/
+/*  font-weight: bolder;*/
+/*  color: #008000;*/
+/*  font-size: 30px;*/
+/*}*/
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.addMemberButton {
+  background-color: #45ffbc;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.addMemberButton:hover {
+  background-color: #3fccaa;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 10px;
+}
+
+.memberItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.removeMemberButton {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.removeMemberButton:hover {
+  background-color: #cc0000;
+}
+
+.submitButton {
+  background-color: #45ffbc;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #3fccaa;
+}
