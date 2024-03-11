@@ -767,3 +767,17 @@ h2 {
 .group-list li a:active {
   background: #c0f9b8;
 }
+
+input {
+  border: none;
+  border-bottom: 2px solid #3498db; /* Change the color as needed */
+  outline: none;
+  font-size: 14px;
+  padding: 5px;
+  transition: border-bottom-color 0.3s ease; /* Add a smooth transition */
+}
+
+input:focus {
+  border-bottom-color: #e74c3c; /* Change the color for focus state */
+}
+
