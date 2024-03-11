@@ -56,7 +56,7 @@ const AddGroup = () => {
             // Add Group
             console.log(groupName,"Mrm: "+members);
             const groupResponse = await axios.post('http://localhost:8080/api/addgroup', { groupName,members });
-            console.log("Group added successfully! " + groupName);
+            alert("Group added successfully! " + groupName);
 
             console.log("Members added to group successfully!");
 

@@ -213,8 +213,8 @@ th {
 /*}*/
 
 .action-button3 {
-  padding: 20px 30px; /* Increase padding for a larger button */
-  font-size: 16px; /* Increase font size for larger text */
+  padding: 15px 30px; /* Increase padding for a larger button */
+  font-size: 14px; /* Increase font size for larger text */
   background-color: #45ffbc;
   color: black;
   border: none;
@@ -222,8 +222,8 @@ th {
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: fixed;
-  right: 320px;
-  bottom: 170px;
+  right: 260px;
+  bottom: 560px;
 }
 
 /*.owe-list {*/

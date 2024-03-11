@@ -127,7 +127,7 @@ const AddExpense = () => {
 
             // Handle successful expense addition (e.g., show success message)
             console.log('Expense added successfully:', responseData);
-
+            alert("Expense added successfully");
             setDescription('');
             setAmount('');
             setSelectedGroup('');
@@ -273,7 +273,7 @@ const AddExpense = () => {
                         ) => {
                         } : null}
                         {error && <p className="error">{error}</p>}
-                        <button className="button" type="submit">Add Expense</button></form>
+                        <button className="button" type="submit" >Add Expense</button></form>
                 </div>
                 <div className='right-section'>
                     {splitOption === 'unequally' && (
